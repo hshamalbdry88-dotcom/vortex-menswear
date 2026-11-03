@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout &amp; Ordering | Vortex Menswear</title>
+  <meta name="description" content="Complete your Vortex Menswear order. Enter your triple name, delivery address and phone number, then send the 90 EGP deposit via Instapay or Vodafone Cash to 01065101692 to confirm.">
+  <meta name="theme-color" content="#14171a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ Header ============ -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Vortex Menswear home">
+        <span class="brand__mark" aria-hidden="true">V</span>
+        <span class="brand__text">
+          <span class="brand__name">Vortex Menswear</span>
+          <span class="brand__tag">Winter Edition</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="index.html">Winter Apparel</a>
+        <a class="nav__link" href="footwear.html">Winter Footwear</a>
+        <a class="nav__link is-active" href="checkout.html">Checkout &amp; Ordering</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="cart-btn" type="button" data-open-cart aria-label="Open your order">
+          <span aria-hidden="true">&#128717;</span>
+          <span class="cart-btn__label">Order</span>
+          <span class="cart-btn__count" data-cart-count hidden>0</span>
+        </button>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ Page head ============ -->
+    <section class="page-head">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a> · <span>Checkout &amp; Ordering</span>
+        </nav>
+        <h1>Checkout &amp; Ordering</h1>
+        <p>
+          Fill in your delivery details below and review the deposit rule. Once your 90 EGP deposit
+          is received, our team confirms the order by phone and dispatches it — the balance is paid
+          on delivery.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <!-- ============ Mandatory deposit rule ============ -->
+        <div class="deposit-banner" role="note">
+          <span class="deposit-banner__icon" aria-hidden="true">&#128176;</span>
+          <div>
+            <h3>Mandatory checkout rule</h3>
+            <p>
+              To complete your order, a <b>90 EGP deposit</b> must be sent via
+              <b>Instapay</b> or <b>Vodafone Cash</b> to: <b data-contact-phone>01065101692</b>.
+              Orders without a confirmed deposit are not dispatched.
+            </p>
+          </div>
+        </div>
+
+        <div class="checkout-layout">
+          <!-- ============ Order form ============ -->
+          <div>
+            <form id="vortex-checkout" class="panel" data-checkout-form novalidate>
+              <div class="panel__head">
+                <span class="eyebrow">Delivery Details</span>
+                <h2>Where should we send it?</h2>
+                <p>All fields marked with <span class="req">*</span> are required.</p>
+              </div>
+
+              <div class="success-box" data-success role="status" aria-live="polite"></div>
+
+              <div class="form-grid">
+                <div class="field field--full">
+                  <label for="fullName">Full Name (Triple Name / الاسم الثلاثي) <span class="req">*</span></label>
+                  <input id="fullName" name="fullName" type="text" autocomplete="name"
+                         data-required data-triple-name
+                         placeholder="e.g. Ahmed Mohamed Ali / أحمد محمد علي">
+                  <p class="field__hint">Please write all three names — first, middle and family name.</p>
+                  <p class="field__error">Please enter your complete triple name (three parts).</p>
+                </div>
+
+                <div class="field field--full">
+                  <label for="address">Exact Delivery Address <span class="req">*</span></label>
+                  <textarea id="address" name="address" data-required data-address
+                            placeholder="Street name and number, building, floor, apartment, district / area"></textarea>
+                  <p class="field__hint">Include the street, building number, floor, apartment and the nearest landmark.</p>
+                  <p class="field__error">Please enter a complete address (street, building, area).</p>
+                </div>
+
+                <div class="field">
+                  <label for="city">City / Governorate <span class="req">*</span></label>
+                  <select id="city" name="city" data-required>
+                    <option value="">Select your city</option>
+                    <option>Cairo</option>
+                    <option>Giza</option>
+                    <option>Alexandria</option>
+                    <option>Dakahlia</option>
+                    <option>Sharqia</option>
+                    <option>Gharbia</option>
+                    <option>Monufia</option>
+                    <option>Qalyubia</option>
+                    <option>Beheira</option>
+                    <option>Port Said</option>
+                    <option>Suez</option>
+                    <option>Ismailia</option>
+                    <option>Fayoum</option>
+                    <option>Beni Suef</option>
+                    <option>Minya</option>
+                    <option>Asyut</option>
+                    <option>Sohag</option>
+                    <option>Qena</option>
+                    <option>Luxor</option>
+                    <option>Aswan</option>
+                    <option>Red Sea</option>
+                    <option>Matrouh</option>
+                    <option>North Sinai</option>
+                    <option>South Sinai</option>
+                    <option>New Valley</option>
+                    <option>Kafr El Sheikh</option>
+                    <option>Damietta</option>
+                  </select>
+                  <p class="field__error">Please select your city or governorate.</p>
+                </div>
+
+                <div class="field">
+                  <label for="phone">Phone Number <span class="req">*</span></label>
+                  <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
+                         data-required placeholder="01065101692">
+                  <p class="field__hint">We call or message this number to confirm your deposit.</p>
+                  <p class="field__error">Please enter a valid phone number.</p>
+                </div>
+
+                <div class="field">
+                  <label for="altPhone">Second Phone (optional)</label>
+                  <input id="altPhone" name="altPhone" type="tel" inputmode="tel" placeholder="Alternative contact number">
+                </div>
+
+                <div class="field">
+                  <label for="email">Email (optional)</label>
+                  <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+                </div>
+
+                <div class="field field--full">
+                  <label>Deposit payment method <span class="req">*</span></label>
+                  <div class="radio-row">
+                    <label class="radio-card">
+                      <input type="radio" name="paymentMethod" value="Instapay" checked>
+                      <strong>Instapay</strong>
+                      <span>Transfer 90 EGP to <span data-contact-phone>01065101692</span></span>
+                    </label>
+                    <label class="radio-card">
+                      <input type="radio" name="paymentMethod" value="Vodafone Cash">
+                      <strong>Vodafone Cash</strong>
+                      <span>Send 90 EGP to <span data-contact-phone>01065101692</span></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="field field--full">
+                  <label for="notes">Order notes (optional)</label>
+                  <textarea id="notes" name="notes" placeholder="Preferred delivery time, size questions, gift note..."></textarea>
+                </div>
+
+                <div class="field field--full">
+                  <label class="check-row" for="terms">
+                    <input id="terms" type="checkbox" data-terms>
+                    <span>
+                      I understand that <strong>90 EGP must be sent via Instapay or Vodafone Cash to
+                      <span data-contact-phone>01065101692</span></strong> to complete this order,
+                      and that the remaining balance is paid in cash on delivery.
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </form>
+
+            <!-- ============ Contact details ============ -->
+            <div class="panel">
+              <div class="panel__head">
+                <span class="eyebrow">Official Contact Details</span>
+                <h2>Talk to a human</h2>
+                <p>Questions about sizing, stock or your deposit? Reach us directly.</p>
+              </div>
+              <ul class="contact-card">
+                <li>
+                  <span class="contact-card__icon" aria-hidden="true">&#128222;</span>
+                  <div>
+                    <span>Contact Number</span>
+                    <a href="tel:01065101692"><strong data-contact-phone>01065101692</strong></a>
+                  </div>
+                </li>
+                <li>
+                  <span class="contact-card__icon" aria-hidden="true">&#9993;</span>
+                  <div>
+                    <span>Email</span>
+                    <a href="mailto:hishamalbadri582@gmail.com"><strong data-contact-email>hishamalbadri582@gmail.com</strong></a>
+                  </div>
+                </li>
+                <li>
+                  <span class="contact-card__icon" aria-hidden="true">&#128176;</span>
+                  <div>
+                    <span>Deposit (Instapay / Vodafone Cash)</span>
+                    <strong>90 EGP → <span data-contact-phone>01065101692</span></strong>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ============ Order summary ============ -->
+          <aside class="panel summary-card" aria-label="Order summary">
+            <div class="panel__head">
+              <span class="eyebrow">Your Order</span>
+              <h2>Order summary</h2>
+              <p>Pieces you added from the winter collections.</p>
+            </div>
+
+            <div class="summary-list" data-checkout-summary></div>
+
+            <div class="totals">
+              <div class="totals__row"><span>Items</span><span data-sum-items>0</span></div>
+              <div class="totals__row"><span>Subtotal</span><span data-sum-subtotal>0 EGP</span></div>
+              <div class="totals__row totals__row--accent">
+                <span>Deposit now (Instapay / Vodafone Cash)</span>
+                <span data-sum-deposit>90 EGP</span>
+              </div>
+              <div class="totals__row totals__row--grand">
+                <span>Balance on delivery</span>
+                <span data-sum-balance>0 EGP</span>
+              </div>
+            </div>
+
+            <button class="btn btn--block" type="submit" form="vortex-checkout">Submit Order</button>
+            <p class="modal__note" style="margin-top:12px;text-align:center">
+              After submitting, send the 90 EGP deposit to <strong data-contact-phone>01065101692</strong> and we will confirm by phone.
+            </p>
+
+            <div style="margin-top:22px;padding-top:20px;border-top:1px solid var(--border)">
+              <span class="eyebrow">What happens next</span>
+              <ol class="steps" style="margin-top:14px">
+                <li><strong>Submit the form</strong> with your triple name, address and phone.</li>
+                <li><strong>Send the deposit</strong> of 90 EGP via Instapay or Vodafone Cash.</li>
+                <li><strong>We confirm &amp; ship</strong> — pay the balance on delivery.</li>
+              </ol>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Customer reviews ============ -->
+    <section class="section" id="reviews" style="border-top:1px solid var(--border)">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Customer Reviews</span>
+          <h2>What our customers say</h2>
+          <p>
+            Ratings and feedback about Vortex Menswear — the products, the delivery and the
+            ordering experience. Your review helps other customers decide.
+          </p>
+        </div>
+
+        <div class="reviews-layout">
+          <!-- Review form -->
+          <div class="panel">
+            <div class="panel__head">
+              <h2>Leave a review</h2>
+              <p>Share your honest feedback about the site and your order.</p>
+            </div>
+
+            <div class="rating-summary">
+              <span class="rating-summary__score" data-rating-score>0.0</span>
+              <div>
+                <div class="stars stars--lg" data-rating-stars></div>
+                <div class="review-item__date" data-rating-count>0 customer reviews</div>
+              </div>
+            </div>
+
+            <form data-review-form novalidate>
+              <div class="field" style="margin-bottom:16px">
+                <label>Your rating <span class="req">*</span></label>
+                <div class="star-input" role="group" aria-label="Star rating">
+                  <button type="button" data-value="1" aria-label="1 star">&#9733;</button>
+                  <button type="button" data-value="2" aria-label="2 stars">&#9733;</button>
+                  <button type="button" data-value="3" aria-label="3 stars">&#9733;</button>
+                  <button type="button" data-value="4" aria-label="4 stars">&#9733;</button>
+                  <button type="button" data-value="5" aria-label="5 stars">&#9733;</button>
+                </div>
+                <p class="field__hint" data-rating-label>Tap a star to rate</p>
+              </div>
+
+              <div class="form-grid">
+                <div class="field field--full">
+                  <label for="reviewName">Your name <span class="req">*</span></label>
+                  <input id="reviewName" name="reviewName" type="text" data-review-name placeholder="e.g. Mostafa H.">
+                </div>
+                <div class="field field--full">
+                  <label for="reviewText">Your feedback <span class="req">*</span></label>
+                  <textarea id="reviewText" name="reviewText" data-review-text
+                            placeholder="Tell us about the fit, the quality, the delivery or the ordering process..."></textarea>
+                </div>
+              </div>
+
+              <button class="btn btn--block" type="submit" style="margin-top:18px">Publish Review</button>
+            </form>
+          </div>
+
+          <!-- Review list -->
+          <div>
+            <div class="review-list" data-review-list></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="brand">
+            <span class="brand__mark" aria-hidden="true">V</span>
+            <span class="brand__text">
+              <span class="brand__name">Vortex Menswear</span>
+              <span class="brand__tag">Winter Edition</span>
+            </span>
+          </div>
+          <p>
+            A focused men's winter wardrobe — outerwear, knitwear and footwear built for cold
+            cities and long nights.
+          </p>
+        </div>
+
+        <div>
+          <h4>Shop</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Winter Apparel</a></li>
+            <li><a href="footwear.html">Winter Footwear</a></li>
+            <li><a href="checkout.html">Checkout &amp; Ordering</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Ordering</h4>
+          <ul class="footer__links">
+            <li><span>Deposit: 90 EGP</span></li>
+            <li><span>Instapay / Vodafone Cash</span></li>
+            <li><span>Balance on delivery</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer__links">
+            <li><a href="tel:01065101692"><span data-contact-phone>01065101692</span></a></li>
+            <li><a href="mailto:hishamalbadri582@gmail.com"><span data-contact-email>hishamalbadri582@gmail.com</span></a></li>
+            <li><span>Deposit: 90 EGP — Instapay / Vodafone Cash</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__credit">
+        <span class="footer__store-line">Vortex Menswear</span>
+        <span class="footer__designer">
+          Designed and Developed by <strong>Hisham Al-Badri</strong>
+        </span>
+      </div>
+
+      <div class="footer__legal">
+        <span>&copy; <span data-year>2026</span> Vortex Menswear. All rights reserved.</span>
+        <span>Cash on delivery · 90 EGP deposit required to confirm every order.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
